@@ -1,19 +1,18 @@
-const http = require('http');
+// Using express
+const express = require('express');
+const app = express();
 
-// http.createServer((req, res) => {
+app.use(express.static('client'));
+
+app.listen(8080);
+
+// using HTML
+// const http = require('http');
+// const fs = require('fs');
+// const server = http.createServer();
+//
+// server.on('request', (req, res) => {
+//   res.end(fs.readFileSync(__dirname + '/../client/index.html'));
 //
 // });
-
-const server = http.createServer();
-
-server.on('request', (req, res) => {
-  res.write("Hello Node!!\n");
-
-  setTimeout(() => {
-    res.write("Still on....");
-    res.end();
-  }, 3000)
-
-});
-
-server.listen(8080);
+// server.listen(8080);
