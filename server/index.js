@@ -2,9 +2,20 @@
 const express = require('express');
 const app = express();
 
-app.use(express.static('client'));
+ app.use(express.static('client'));
+app.set('view engine', 'ejs');
 
-app.listen(8080);
+import serverRender from './render'
+
+app.get('/', (req, res) => {
+  res.render('index', {
+    content: serverRender()
+  });
+})
+
+app.listen(8080, () => {
+  console.log("Server is running...")
+});
 
 // using HTML
 // const http = require('http');

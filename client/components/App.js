@@ -14,7 +14,9 @@
 //==========================
 // Class component syntax
 //==========================
-import BookList from './BookList'
+const React = require('react');
+import BookList from './BookList';
+
 class App extends React.Component {
   state = { answer: 42};
   render (){

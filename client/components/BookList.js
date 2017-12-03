@@ -1,3 +1,5 @@
+const React = require('react');
+
 import Book from './Book'
 
 const BookList = (porps) => {
@@ -7,7 +9,7 @@ const BookList = (porps) => {
       <Book />
       <Book />
     </div>
-    
+
   );
 };
 
