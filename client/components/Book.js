@@ -1,8 +1,12 @@
 const React = require('react');
 
-const Book = (porps) => {
+const Book = (props) => {
   return (
-    <div> One Book...</div>
+    <div>
+      <div>{props.title}</div>
+      <div>{props.author}</div>
+      <div>{props.price}</div>
+    </div>
   );
 }
 

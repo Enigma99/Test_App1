@@ -2,12 +2,12 @@ const React = require('react');
 
 import Book from './Book'
 
-const BookList = (porps) => {
+const BookList = (props) => {
   return (
     <div>
-      <Book />
-      <Book />
-      <Book />
+      {props.books.map(book =>
+        <Book key={book.id} {...book} />
+      )}
     </div>
 
   );
